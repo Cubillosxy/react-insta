@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "lint": "standard",
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,5 +34,15 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
+  },
+  "standard": {
+    "ignore": [
+      "/api/**",
+      "/dist/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends" : ["./node_modules/standard/eslintrc.json"]
   }
 }
+
