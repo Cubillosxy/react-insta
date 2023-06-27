@@ -1,0 +1,18 @@
+import { Outlet } from "react-router";
+import Header from "./Header";
+
+export default function Layout(props) {
+    return (
+
+        <main>
+            <Header />  
+            <Outlet />
+            {props?.children}
+
+        </main>
+
+
+    );
+
+
+};

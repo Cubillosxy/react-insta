@@ -1,40 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Post from './Post.js';
+import Header from './Header';
+import {Route, Routes} from 'react-router-dom';
+import Layout from './Layout';
 
 function App() {
   return (
-    <main>
-      <header>
-        <a href="/" className='logo'>Local News</a>
-        <nav>
-          <a href="/">Login</a>
-          <a href="/">Register</a>
-        </nav>
+    <Routes> 
+      <Route path="/" element={<Layout />} >
+        <Route index element={
+              <Post />
+        } />
 
-      </header>
-      <div className="post">
-        <div className="image">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        
-        <div className="texts">
+        <Route path="/login" element={
+          <div>login</div>
+        } />
 
-          <h2>ocean Gate</h2>
-
-          <p className='info'> 
-
-            <a href="/" className='author'>Edwin Kis</a>
-            <time> 1 hour ago</time>
-            
-            
-            this a test inside ocean gate
-          
-          </p>
-        </div>
+        <Route path="/singup" element={ 
+          <div>sing up</div>
+        } />
 
 
-      </div>
-    </main>
+      </Route> 
+
+    </Routes>
+
+
+
   );
 }
 
